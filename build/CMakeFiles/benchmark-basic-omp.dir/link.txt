@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG -fopenmp CMakeFiles/benchmark-basic-omp.dir/dgemm-basic-omp.cpp.o CMakeFiles/benchmark.dir/benchmark.cpp.o -o benchmark-basic-omp  -Wl,-rpath,/home/gator/software/likwid-5.2.2-install/lib /usr/lib/x86_64-linux-gnu/libblas.so /home/gator/software/likwid-5.2.2-install/lib/liblikwid.so 
