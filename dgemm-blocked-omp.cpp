@@ -49,16 +49,17 @@ copy_matrix(int n, int i, int k, int block_size, double* M, double* tile_M, bool
 
 void square_dgemm_blocked(int n, int block_size, double* A, double* B, double* C) 
 {   
-   std::vector<double> buf(3 * block_size * block_size);
-   double* tile_A = buf.data();
-   double* tile_B = tile_A + block_size * block_size;
-   double* tile_C = tile_B + block_size * block_size;
-
    #pragma omp parallel
    {
       #ifdef LIKWID_PERFMON
       LIKWID_MARKER_START(MY_MARKER_REGION_NAME);
       #endif
+
+      std::vector<double> buf(3 * block_size * block_size);
+      double* tile_A = buf.data();
+      double* tile_B = tile_A + block_size * block_size;
+      double* tile_C = tile_B + block_size * block_size;
+
 
       #pragma omp for collapse(2)
       for(int i = 0; i < n; i += block_size)
