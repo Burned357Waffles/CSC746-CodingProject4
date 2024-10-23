@@ -1,0 +1,251 @@
+likwid-perfctr -m -g L3CACHE -C N:0-0 ./benchmark-blocked-omp -N 128 -B 4
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 7763 64-Core Processor                
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	2.45 GHz
+--------------------------------------------------------------------------------
+Description:	Blocked dgemm, OpenMP-enabled
+
+Hello world, I'm thread 0 out of 1 total threads. 
+Working on problem size N=128 
+Blocked DGEMM 
+ Working on Block size = 4 
+ Elapsed time is : 0.0019 (sec) 
+--------------------------------------------------------------------------------
+Region MMUL_Region, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.001880 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 0 |
++----------------------+---------+------------+
+| RETIRED_INSTRUCTIONS |   PMC0  |   29687790 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |    6617827 |
+|     L3_CACHE_REQ     |  CPMC0  |       7189 |
+|      L3_MISS_REQ     |  CPMC1  |       5933 |
+|   L3_CACHE_REQ_MISS  |  CPMC2  |       4042 |
++----------------------+---------+------------+
+
++---------------------+------------+
+|        Metric       | HWThread 0 |
++---------------------+------------+
+| Runtime (RDTSC) [s] |     0.0019 |
+|         CPI         |     inf    |
+|   L3 request rate   |     0.0002 |
+|     L3 miss rate    |     0.0001 |
+|    L3 miss ratio    |     0.5622 |
++---------------------+------------+
+
+likwid-perfctr -m -g L3CACHE -C N:0-0 ./benchmark-blocked-omp -N 128 -B 16
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 7763 64-Core Processor                
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	2.45 GHz
+--------------------------------------------------------------------------------
+Description:	Blocked dgemm, OpenMP-enabled
+
+Hello world, I'm thread 0 out of 1 total threads. 
+Working on problem size N=128 
+Blocked DGEMM 
+ Working on Block size = 16 
+ Elapsed time is : 0.0010 (sec) 
+--------------------------------------------------------------------------------
+Region MMUL_Region, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.000953 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 0 |
++----------------------+---------+------------+
+| RETIRED_INSTRUCTIONS |   PMC0  |   14656480 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |    3347859 |
+|     L3_CACHE_REQ     |  CPMC0  |       7940 |
+|      L3_MISS_REQ     |  CPMC1  |       5361 |
+|   L3_CACHE_REQ_MISS  |  CPMC2  |       3375 |
++----------------------+---------+------------+
+
++---------------------+------------+
+|        Metric       | HWThread 0 |
++---------------------+------------+
+| Runtime (RDTSC) [s] |     0.0010 |
+|         CPI         |     inf    |
+|   L3 request rate   |     0.0005 |
+|     L3 miss rate    |     0.0002 |
+|    L3 miss ratio    |     0.4251 |
++---------------------+------------+
+
+likwid-perfctr -m -g L3CACHE -C N:0-0 ./benchmark-blocked-omp -N 512 -B 4
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 7763 64-Core Processor                
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	2.45 GHz
+--------------------------------------------------------------------------------
+Description:	Blocked dgemm, OpenMP-enabled
+
+Hello world, I'm thread 0 out of 1 total threads. 
+Working on problem size N=512 
+Blocked DGEMM 
+ Working on Block size = 4 
+ Elapsed time is : 0.1288 (sec) 
+--------------------------------------------------------------------------------
+Region MMUL_Region, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.128753 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 0 |
++----------------------+---------+------------+
+| RETIRED_INSTRUCTIONS |   PMC0  | 1885772000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |  451377000 |
+|     L3_CACHE_REQ     |  CPMC0  |   14698500 |
+|      L3_MISS_REQ     |  CPMC1  |     148226 |
+|   L3_CACHE_REQ_MISS  |  CPMC2  |     102045 |
++----------------------+---------+------------+
+
++---------------------+------------+
+|        Metric       | HWThread 0 |
++---------------------+------------+
+| Runtime (RDTSC) [s] |     0.1288 |
+|         CPI         |     inf    |
+|   L3 request rate   |     0.0078 |
+|     L3 miss rate    |     0.0001 |
+|    L3 miss ratio    |     0.0069 |
++---------------------+------------+
+
+likwid-perfctr -m -g L3CACHE -C N:0-0 ./benchmark-blocked-omp -N 512 -B 16
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 7763 64-Core Processor                
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	2.45 GHz
+--------------------------------------------------------------------------------
+Description:	Blocked dgemm, OpenMP-enabled
+
+Hello world, I'm thread 0 out of 1 total threads. 
+Working on problem size N=512 
+Blocked DGEMM 
+ Working on Block size = 16 
+ Elapsed time is : 0.0608 (sec) 
+--------------------------------------------------------------------------------
+Region MMUL_Region, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.060720 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 0 |
++----------------------+---------+------------+
+| RETIRED_INSTRUCTIONS |   PMC0  |  932979100 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |  212782200 |
+|     L3_CACHE_REQ     |  CPMC0  |    2870739 |
+|      L3_MISS_REQ     |  CPMC1  |     960712 |
+|   L3_CACHE_REQ_MISS  |  CPMC2  |     114668 |
++----------------------+---------+------------+
+
++---------------------+------------+
+|        Metric       | HWThread 0 |
++---------------------+------------+
+| Runtime (RDTSC) [s] |     0.0607 |
+|         CPI         |     inf    |
+|   L3 request rate   |     0.0031 |
+|     L3 miss rate    |     0.0001 |
+|    L3 miss ratio    |     0.0399 |
++---------------------+------------+
+
+likwid-perfctr -m -g L3CACHE -C N:0-0 ./benchmark-blocked-omp -N 2048 -B 4
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 7763 64-Core Processor                
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	2.45 GHz
+--------------------------------------------------------------------------------
+Description:	Blocked dgemm, OpenMP-enabled
+
+Hello world, I'm thread 0 out of 1 total threads. 
+Working on problem size N=2048 
+Blocked DGEMM 
+ Working on Block size = 4 
+ Elapsed time is : 9.1959 (sec) 
+--------------------------------------------------------------------------------
+Region MMUL_Region, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   9.195815 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+--------------+
+|         Event        | Counter |  HWThread 0  |
++----------------------+---------+--------------+
+| RETIRED_INSTRUCTIONS |   PMC0  | 120467200000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |  32087990000 |
+|     L3_CACHE_REQ     |  CPMC0  |   1058872000 |
+|      L3_MISS_REQ     |  CPMC1  |     93543320 |
+|   L3_CACHE_REQ_MISS  |  CPMC2  |     46045510 |
++----------------------+---------+--------------+
+
++---------------------+------------+
+|        Metric       | HWThread 0 |
++---------------------+------------+
+| Runtime (RDTSC) [s] |     9.1958 |
+|         CPI         |     inf    |
+|   L3 request rate   |     0.0088 |
+|     L3 miss rate    |     0.0004 |
+|    L3 miss ratio    |     0.0435 |
++---------------------+------------+
+
+likwid-perfctr -m -g L3CACHE -C N:0-0 ./benchmark-blocked-omp -N 2048 -B 16
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 7763 64-Core Processor                
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	2.45 GHz
+--------------------------------------------------------------------------------
+Description:	Blocked dgemm, OpenMP-enabled
+
+Hello world, I'm thread 0 out of 1 total threads. 
+Working on problem size N=2048 
+Blocked DGEMM 
+ Working on Block size = 16 
+ Elapsed time is : 4.0737 (sec) 
+--------------------------------------------------------------------------------
+Region MMUL_Region, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   4.073618 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+-------------+
+|         Event        | Counter |  HWThread 0 |
++----------------------+---------+-------------+
+| RETIRED_INSTRUCTIONS |   PMC0  | 59636230000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  | 14199770000 |
+|     L3_CACHE_REQ     |  CPMC0  |   210716400 |
+|      L3_MISS_REQ     |  CPMC1  |    88463840 |
+|   L3_CACHE_REQ_MISS  |  CPMC2  |    23119500 |
++----------------------+---------+-------------+
+
++---------------------+------------+
+|        Metric       | HWThread 0 |
++---------------------+------------+
+| Runtime (RDTSC) [s] |     4.0736 |
+|         CPI         |     inf    |
+|   L3 request rate   |     0.0035 |
+|     L3 miss rate    |     0.0004 |
+|    L3 miss ratio    |     0.1097 |
++---------------------+------------+
