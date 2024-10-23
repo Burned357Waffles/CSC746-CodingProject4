@@ -1,0 +1,6 @@
+# author: Brandon Watanabe, Oct 2024,,,,,
+# averaged over 5 runs,,,,,,
+Problem Size (N), Basic    , BMMCO-4    , BMMCO-16    , CBLAS
+128             , 9.5548   , 26.3732    , 13.01989    , 1
+512             , 10.5692  , 29.51445   , 14.60218    , 1
+1024,           , 10.6428  , 29.80488   , 14.75464    , 1
